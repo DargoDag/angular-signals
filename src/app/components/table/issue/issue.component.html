@@ -1,0 +1,17 @@
+<tr (click)="handleToggleIssue($event)"
+    [class.checked]="issue().checked"
+    [class.resolvedIssue]="issue().status === 'resolved'">
+  <td>
+    <input (click)="handleToggleIssue($event)"
+           [checked]="issue().checked"
+           [disabled]="issue().status === 'resolved'"
+           class="checkbox"
+           type="checkbox"/>
+  </td>
+  <td>{{ issue().name }}</td>
+  <td>{{ issue().message }}</td>
+  <td>
+    <span [ngClass]="{'openCircle': issue().status === 'open', 'resolvedCircle': issue().status === 'resolved'}"
+          class="statusCircle"></span>
+  </td>
+</tr>

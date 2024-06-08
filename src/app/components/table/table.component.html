@@ -1,0 +1,37 @@
+<table class="table">
+  <thead>
+  <tr>
+    <th>
+      <input
+        (change)="toggleAllCheckboxes($event)"
+        [checked]="mainCheckboxState() === 'checked'"
+        [indeterminate]="mainCheckboxState() === 'indeterminate'"
+        class="checkbox"
+        type="checkbox"
+      />
+    </th>
+    <th class="numChecked">
+      @if (numCheckboxesSelected()) {
+        Выбрано {{ numCheckboxesSelected() }}
+      } @else {
+        Нет
+      }
+    </th>
+  </tr>
+  <tr>
+    <th></th>
+    <th>Имя</th>
+    <th>Сообщение</th>
+    <th>Статус</th>
+  </tr>
+  </thead>
+  <tbody>
+    @for (issue of issues(); track trackByIssueId) {
+      <app-issue
+        [issue]="issue"
+        (toggleIssueSignal)="handleToggleIssue(issue.id)">
+      </app-issue>
+    }
+  </tbody>
+
+</table>

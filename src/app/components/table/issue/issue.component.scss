@@ -1,0 +1,47 @@
+:host {
+  display: contents;
+}
+
+tr {
+  cursor: pointer;
+
+  &:hover {
+    background-color: #eeeeee;
+  }
+}
+
+td {
+  padding: 1.5rem 0;
+}
+
+.checkbox {
+  height: 1.25rem;
+  margin-left: 1rem;
+  width: 1.25rem;
+  cursor: pointer;
+}
+
+.resolvedIssue {
+  color: #bdbdbd;
+  pointer-events: none;
+}
+
+.statusCircle {
+  border-radius: 50%;
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  margin: auto 8px auto 0;
+}
+
+.openCircle {
+  background-color: #82d032;
+}
+
+.resolvedCircle {
+  background-color: #FF0000FF;
+}
+
+.checked {
+  background-color: #D3D0D0FF;
+}

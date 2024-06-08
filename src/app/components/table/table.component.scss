@@ -1,0 +1,33 @@
+.table {
+  box-shadow: #959DA533 0 8px 24px;
+  border-collapse: collapse;
+  width: 100%;
+
+  thead > tr {
+    border: solid 2px #eeeeee;
+  }
+
+  th {
+    padding: 1.5rem 0;
+  }
+
+  tr {
+    text-align: left;
+  }
+
+  tbody {
+
+  }
+}
+
+.checkbox {
+  height: 1.25rem;
+  margin-left: 1rem;
+  width: 1.25rem;
+  cursor: pointer;
+}
+
+.numChecked {
+  min-width: 8rem;
+}
+
